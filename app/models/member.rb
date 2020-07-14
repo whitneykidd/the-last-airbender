@@ -1,5 +1,5 @@
 class Member
-  attr_reader :name, :photoUrl, :allies, :enemies, :affiliation
+  attr_reader :name, :photo, :allies, :enemies, :affiliation
   def initialize(attributes)
     @name = attributes[:name]
     @photo = attributes[:photoUrl]
