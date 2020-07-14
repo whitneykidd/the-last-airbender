@@ -18,6 +18,7 @@ feature 'user can search for nation members' do
       expect(page).to have_css('.allies')
       expect(page).to have_css('.affiliation')
     end
+    save_and_open_page
   end
 end
 

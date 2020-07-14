@@ -1,0 +1,31 @@
+<h1><%= @members.count %> Members</h1>
+<% @members.each do |member| %>
+  <div class="member">
+    <div class="name">
+      <h3> <%= member[:name] %></h3>
+    </div>
+
+    <div class="photo">
+      <%= image_tag("#{member[:photoUrl]}") %>
+    </div>
+
+    <div class="allies">
+      <h4>Allies:</h4>
+      <% member[:allies].each do |ally| %>
+       <%= ally %><br>
+      <% end %>
+    </div>
+
+    <div class="enemies">
+      <h4>Enemies:</h4>
+      <%member[:enemies].each do |enemy| %>
+        <%= enemy %><br>
+      <% end %>
+    </div>
+
+    <div class="affiliation">
+      <h4>Affiliation:</h4>
+        <%= member[:affiliation] %>
+      </div>
+  </div>
+<% end %>
