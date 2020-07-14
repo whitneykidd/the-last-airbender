@@ -6,7 +6,7 @@ describe AirbenderService do
       it "returns member data" do
         service = AirbenderService.new
         search = service.members_of_nation("Fire Nation")
-        # expect(search).to be_a Hash
+
         expect(search).to be_an Array
         member_data = search.first
 
